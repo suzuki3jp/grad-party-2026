@@ -55,10 +55,7 @@ const details: ComponentProps<typeof DetailCard>[] = [
 
 export function DetailsSection() {
   return (
-    <section
-      id="details"
-      className="py-20 md:py-32 bg-secondary/30 min-h-screen"
-    >
+    <section id="details" className="py-20 md:py-32 bg-secondary/30">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">

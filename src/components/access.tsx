@@ -1,4 +1,5 @@
 import { MAP_EMBED_URL } from "@/constants/links";
+import { Separator } from "./separator";
 
 export function AccessSection() {
   return (
@@ -9,7 +10,7 @@ export function AccessSection() {
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
               アクセス
             </h2>
-            <div className="w-16 h-1 bg-primary mx-auto mb-6"></div>
+            <Separator className="w-16 h-1 mx-auto mb-6" />
             <p className="text-lg text-foreground/70">
               大学キャンパス内 学生ホール 2階
             </p>

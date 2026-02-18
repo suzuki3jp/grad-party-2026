@@ -1,10 +1,10 @@
-import { HeroSection } from "@/components/hero";
-import { DetailsSection } from "@/components/details";
-import { CountdownSection } from "@/components/countdown";
-import { SurveySection } from "@/components/survey";
-import { PhotoGallerySection } from "@/components/photo-gallery";
 import { AccessSection } from "@/components/access";
+import { CountdownSection } from "@/components/countdown";
+import { DetailsSection } from "@/components/details";
 import { Footer } from "@/components/footer";
+import { HeroSection } from "@/components/hero";
+import { PhotoGallerySection } from "@/components/photo-gallery";
+import { SurveySection } from "@/components/survey";
 
 export default function Home() {
   return (
