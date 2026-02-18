@@ -1,0 +1,39 @@
+export interface Photo {
+  url: string;
+  alt: string;
+}
+
+export const PHOTOS: Photo[] = [
+  {
+    url: 'https://private-us-east-1.manuscdn.com/sessionFile/fFMfcgCRSoz05uE4wZR39n/sandbox/e9WnijA56L806Xr1efWVEZ-img-2_1770810773000_na1fn_Y2VsZWJyYXRpb24tbW9tZW50.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZkZNZmNnQ1JTb3owNXVFNHdaUjM5bi9zYW5kYm94L2U5V25pakE1Nkw4MDZYcjFlZldWRVotaW1nLTJfMTc3MDgxMDc3MzAwMF9uYTFmbl9ZMlZzWldKeVlYUnBiMjR0Ylc5dFpXNTAucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=giUJTp05oeJ5aTkSZz2XNRLYUlpvZomDDaKIG3qihnYKPGzeAH6IY1KIc3sP~CEOUUOi~ZPRKFboMrIQ3IXepfi3intVGI2T7osLuHc5oOFKS75khslnx-3lZkzr60okrPnTgA5nY-j-PNA6I5OXNrzzBUOADpCsSuBDECE~CdDg7zECOonSpYGNLE9zLeDcjeDvVE6D2DzMP0VRqRbyRRVQ9dYsqrYZG5j~EK75ERk~QPXKq4k09ZINquvZVluMXTSo8ztrOmuuTfAuNFuRmvOzMmfi6SwmKkdqt6HYnelwsKdWl72clG6slV4SC7Ga8OKt~fP6m14tb05u12bYOw__',
+    alt: '卒業式の思い出'
+  },
+  {
+    url: 'https://private-us-east-1.manuscdn.com/sessionFile/fFMfcgCRSoz05uE4wZR39n/sandbox/e9WnijA56L806Xr1efWVEZ-img-3_1770810771000_na1fn_ZnJpZW5kcy1zaWxob3VldHRl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZkZNZmNnQ1JTb3owNXVFNHdaUjM5bi9zYW5kYm94L2U5V25pakE1Nkw4MDZYcjFlZldWRVotaW1nLTNfMTc3MDgxMDc3MTAwMF9uYTFmbl9abkpwWlc1a2N5MXphV3hvYjNWbGRIUmwucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=HrnQz5ZJheqMLwKueL~z5dcKoNbhFd2f1r-jRY-lw~KrZis8qpdZQDTrSEOxaWNNtN~jw1w-1NNd-4ENTZzSsOcROn6Usvkja12DPHMQUDW4sVOItKey5rdB7nmsrod6QjkQLfQLg2K4HXfHQGH6FYOyR3i~ZR3w6VlIjckJ~HpfnP7-8oD6ZNBaUroq0r99-Vk31zuGX41ZedA9PqbJ6tFOo3KtGfLa1ILPZ6mMLFeZ7ED2rjFyCL1S19tqWJJXX0FCS2CFEO6ZxZIouo9fEIlqloA38VkddGvcn3mDCrUhwHkGSlj9k8nrJID59cj2Q3PL5s4FUz7AHcOGyKyRwg__',
+    alt: '仲間たちとの思い出'
+  },
+  {
+    url: 'https://private-us-east-1.manuscdn.com/sessionFile/fFMfcgCRSoz05uE4wZR39n/sandbox/e9WnijA56L806Xr1efWVEZ-img-4_1770810771000_na1fn_Y2FtcHVzLXBhdGh3YXk.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZkZNZmNnQ1JTb3owNXVFNHdaUjM5bi9zYW5kYm94L2U5V25pakE1Nkw4MDZYcjFlZldWRVotaW1nLTRfMTc3MDgxMDc3MTAwMF9uYTFmbl9ZMkZ0Y0hWekxYQmhkR2gzWVhrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=gdEVJ4t32WivTz-e7FLNqzOcrAVn~~eFF-qOqOcdjar0dXCqVdc2kD1cz4GZ0o2wyntT5gRzlhY3HwNOnf1V7S1FxNzHyAZSF8gV2YsCzSNufAQhtE5YbPJ4Q3uJlrAbUqcuUHMhhqgBsql19Xy9xrGXDLbeXyK~NOK4NCBBn6YPG-2r8MUxjd~lmyYl-oqrOR8zoMYyBro7Edy11g-JFempclkiM-Gdiz1RSJmFi0rPxf8khBf-rO1ULvE1v94r9krxR8DroAcf7uhBxwNYs4Rl11nhx02X~Httfl~tQUWfTRE49-ESQkf9YqlJDZcP6zhrrrX6kEawL9a51fNZEg__',
+    alt: 'キャンパスの風景'
+  },
+  {
+    url: 'https://private-us-east-1.manuscdn.com/sessionFile/fFMfcgCRSoz05uE4wZR39n/sandbox/e9WnijA56L806Xr1efWVEZ-img-5_1770810765000_na1fn_bWVtb3J5LWJvb2s.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZkZNZmNnQ1JTb3owNXVFNHdaUjM5bi9zYW5kYm94L2U5V25pakE1Nkw4MDZYcjFlZldWRVotaW1nLTVfMTc3MDgxMDc2NTAwMF9uYTFmbl9iV1Z0YjNKNUxXSnZiMnMucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=gJhcoDU4EXAUHJclFCrd66PcCRWovF6sHmSiuOZqEuDjKevKYc6COW3VDmOs6RDrVvFe6V572BnevbF4dL7PF2MM09Tb~1-QQoGOO7OvDoCIB2j~IoIFFtdOYGSVA5ZpMP9zRrCmsN3WZXebgkazpKZcQw2NDiPM6TavZaqv4AMwGSpWygiRhIB1Q2CNhWqw15DXMu78BUJ4N3fGmrAX6PE2KE8eDqGGMwSvrJlhsLMgRwFhKmdJ7O13L3WS~WcHj3y79xlsx-sIXV7E3HSrOJBO0gv-tUWfLHfAyqRS9Mce0nUMubmorQQQk9Z2lakVJzqgFty3EkrUiuB0NwpS8g__',
+    alt: '思い出のアルバム'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80',
+    alt: '大学生活の思い出'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800',
+    alt: 'キャンパスライフ'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800',
+    alt: '卒業の喜び'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80',
+    alt: '友情の証'
+  }
+];
