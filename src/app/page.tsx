@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <DetailsSection />
       <CountdownSection />
+      <DetailsSection />
       <SurveySection />
       <Suspense>
         <PhotoGallerySection />

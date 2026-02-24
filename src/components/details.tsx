@@ -1,16 +1,30 @@
 import { Calendar, Clock, type LucideIcon, MapPin, Users } from "lucide-react";
 import type { ComponentProps, ReactNode } from "react";
+import { EVENT_END, EVENT_START } from "@/constants/event";
 import { Separator } from "./separator";
 import { Card } from "./ui/card";
+
+function toJPTime(date: Date) {
+  return date.toLocaleString("ja-JP", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
 
 const details: ComponentProps<typeof DetailCard>[] = [
   {
     Icon: Calendar,
     title: "日時",
-    secondary: "2026年3月25日（水）",
+    secondary: EVENT_START.toLocaleDateString("ja-JP", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }),
     content: (
       <>
-        <span className="block mt-1">18:00 - 21:00</span>
+        <span className="block mt-1">
+          {toJPTime(EVENT_START)} - {toJPTime(EVENT_END)}
+        </span>
         <span className="block mt-1 text-sm">受付開始: 17:30</span>
       </>
     ),
@@ -18,12 +32,11 @@ const details: ComponentProps<typeof DetailCard>[] = [
   {
     Icon: MapPin,
     title: "会場",
-    secondary: "大学キャンパス内",
+    secondary: "ロイヤルホールヨコハマ N階",
     content: (
-      <>
-        <span className="block mt-1">学生ホール 2階 バンケットルーム</span>
-        <span className="block mt-2 text-sm">〒100-0001 東京都千代田区...</span>
-      </>
+      <span className="block mt-2 text-sm">
+        〒231-8544 横浜市中区山下町90番地
+      </span>
     ),
   },
   {

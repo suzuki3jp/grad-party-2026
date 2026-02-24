@@ -11,9 +11,7 @@ export function AccessSection() {
               アクセス
             </h2>
             <Separator className="w-16 h-1 mx-auto mb-6" />
-            <p className="text-lg text-foreground/70">
-              大学キャンパス内 学生ホール 2階
-            </p>
+            <p className="text-lg text-foreground/70">ロイヤルホールヨコハマ</p>
           </div>
           <div className="aspect-video bg-muted rounded-lg overflow-hidden border border-border">
             <iframe

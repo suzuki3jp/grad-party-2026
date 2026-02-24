@@ -9,11 +9,11 @@ export function SurveySection() {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-            卒業後アンケート
+            卒業パーティ後アンケート
           </h2>
           <Separator className="w-16 h-1 mb-8 mx-auto" />
           <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
-            卒業式を終えた皆さんの声をお聞かせください。
+            卒業パーティを終えた皆さんの声をお聞かせください。
             <br />
             今後のイベント企画の参考にさせていただきます。
           </p>
