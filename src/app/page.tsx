@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { AccessSection } from "@/components/access";
 import { CountdownSection } from "@/components/countdown";
 import { DetailsSection } from "@/components/details";
@@ -13,7 +14,9 @@ export default function Home() {
       <DetailsSection />
       <CountdownSection />
       <SurveySection />
-      <PhotoGallerySection />
+      <Suspense>
+        <PhotoGallerySection />
+      </Suspense>
       <AccessSection />
       <Footer />
     </>

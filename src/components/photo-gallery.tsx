@@ -3,7 +3,6 @@
 import { Camera, X } from "lucide-react";
 import Image from "next/image";
 import { useQueryState } from "nuqs";
-import type { PropsWithChildren } from "react";
 import { SELECTED_PHOTO_KEY } from "@/constants/keys";
 import { PHOTOS } from "@/constants/photos";
 import { Button } from "./ui/button";
@@ -45,11 +44,7 @@ function PhotoGallery() {
             src={photo.url}
             alt={photo.alt}
             loading="lazy"
-            className="
-                w-full h-full object-cover
-                transition-transform duration-500
-                group-hover:scale-110
-              "
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             fill
           />
         </Button>

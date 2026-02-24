@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { EVENT_START, EVENT_END } from "@/constants/event";
+import { EVENT_END, EVENT_START } from "@/constants/event";
 
 interface TimeLeft {
   days: number;
@@ -31,7 +31,7 @@ function Countdown() {
 
   useEffect(() => {
     const calculateTimeLeft = (): TimeLeft | null => {
-      const now = new Date().getTime();
+      const now = Date.now();
       const startTime = EVENT_START.getTime();
       const endTime = EVENT_END.getTime();
 
