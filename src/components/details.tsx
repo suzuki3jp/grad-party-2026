@@ -8,6 +8,7 @@ function toJPTime(date: Date) {
   return date.toLocaleString("ja-JP", {
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "Asia/Tokyo",
   });
 }
 
