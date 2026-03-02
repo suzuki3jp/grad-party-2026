@@ -1,6 +1,6 @@
 // Google Forms URL for survey
-// TODO: Replace with actual Google Forms URL
-export const SURVEY_URL = "https://forms.google.com/your-form-id";
+export const SURVEY_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSc36b8fb4tfiFLX-yyAllkVdEZR3yt8hF7TidSk06Y0u5ujSA/viewform?usp=dialog";
 
 // Google Maps embed URL
 export const MAP_EMBED_URL =

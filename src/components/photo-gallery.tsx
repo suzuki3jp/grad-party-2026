@@ -33,12 +33,12 @@ function PhotoGallery() {
   const [_, setSelectedPhoto] = useQueryState(SELECTED_PHOTO_KEY);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {PHOTOS.map((photo, index) => (
         <Button
           key={index}
           onClick={() => setSelectedPhoto(String(index))} // TODO: Vercel Blob を導入したら、ID を使用するように変更
-          className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 size-[350px]"
+          className="relative aspect-square h-auto w-full overflow-hidden rounded-lg group cursor-pointer transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
         >
           <Image
             src={photo.url}

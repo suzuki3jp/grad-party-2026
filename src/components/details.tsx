@@ -1,4 +1,4 @@
-import { Calendar, Clock, type LucideIcon, MapPin, Users } from "lucide-react";
+import { Calendar, type LucideIcon, MapPin, Users } from "lucide-react";
 import type { ComponentProps, ReactNode } from "react";
 import { EVENT_END, EVENT_START } from "@/constants/event";
 import { Separator } from "./separator";
@@ -25,31 +25,18 @@ const details: ComponentProps<typeof DetailCard>[] = [
         <span className="block mt-1">
           {toJPTime(EVENT_START)} - {toJPTime(EVENT_END)}
         </span>
-        <span className="block mt-1 text-sm">受付開始: 17:30</span>
+        <span className="block mt-1 text-sm">受付開始: 16:00</span>
       </>
     ),
   },
   {
     Icon: MapPin,
     title: "会場",
-    secondary: "ロイヤルホールヨコハマ N階",
+    secondary: "ロイヤルホールヨコハマ 2階",
     content: (
       <span className="block mt-2 text-sm">
         〒231-8544 横浜市中区山下町90番地
       </span>
-    ),
-  },
-  {
-    Icon: Clock,
-    title: "プログラム",
-    content: (
-      <ul className="text-foreground/70 leading-relaxed space-y-1">
-        <li>• 歓談・軽食</li>
-        <li>• 思い出のスライドショー</li>
-        <li>• 表彰式</li>
-        <li>• フォトセッション</li>
-        <li>• フリータイム</li>
-      </ul>
     ),
   },
   {
@@ -58,8 +45,8 @@ const details: ComponentProps<typeof DetailCard>[] = [
     secondary: "参加費: 無料",
     content: (
       <>
-        <span className="block mt-2">持ち物: 学生証</span>
-        <span className="block mt-1">服装: スマートカジュアル</span>
+        <span className="block mt-2">持ち物: 返却していない方は入校証</span>
+        <span className="block mt-1">服装: 自由な服装</span>
         <span className="block mt-2 text-sm">※途中参加・退出可能です</span>
       </>
     ),
@@ -78,7 +65,7 @@ export function DetailsSection() {
             <Separator className="w-16 h-1 mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {details.map((detail) => (
               <DetailCard key={detail.title} {...detail} />
             ))}

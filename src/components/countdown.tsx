@@ -91,7 +91,7 @@ function Countdown() {
   }
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
+    <div className="grid grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
       <TimeUnit value={timeLeft.days} label="日" />
       <TimeUnit value={timeLeft.hours} label="時間" />
       <TimeUnit value={timeLeft.minutes} label="分" />
