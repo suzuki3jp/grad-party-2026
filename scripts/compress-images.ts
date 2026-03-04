@@ -33,7 +33,7 @@ async function main() {
       const inputPath = join(INPUT_DIR, file);
       const outputPath = join(OUTPUT_DIR, file.replace(/\.[^.]+$/, ".jpg"));
 
-      const image = sharp(inputPath);
+      const image = sharp(inputPath).rotate(); // EXIF Orientation を適用
       const { width = 0, height = 0 } = await image.metadata();
       const needsResize = width > MAX_DIMENSION || height > MAX_DIMENSION;
 
