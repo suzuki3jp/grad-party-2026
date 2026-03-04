@@ -1,7 +1,7 @@
 /**
  * true かつ EVENT_END より前の場合、Vercel Blob の代わりにモック画像を表示する
  */
-export const GALLERY_MOCK_ENABLED = true;
+export const GALLERY_MOCK_ENABLED = false;
 
 export interface Photo {
   url: string;

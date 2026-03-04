@@ -7,16 +7,15 @@ import { PhotoGallerySectionClient } from "./photo-gallery-client";
 export async function PhotoGallerySection() {
   noStore();
 
-  if (GALLERY_MOCK_ENABLED && new Date() < EVENT_END) {
-    const photos = PHOTOS.map((p) => ({ url: p.url, pathname: p.alt }));
-    return <PhotoGallerySectionClient photos={photos} />;
-  }
+  const photos =
+    GALLERY_MOCK_ENABLED && new Date() < EVENT_END
+      ? PHOTOS.map((p) => ({ url: p.url, pathname: p.alt }))
+      : (await list()).blobs.map((blob) => ({
+          url: blob.url,
+          pathname: blob.pathname,
+        }));
 
-  const { blobs } = await list();
-  const photos = blobs.map((blob) => ({
-    url: blob.url,
-    pathname: blob.pathname,
-  }));
-
-  return <PhotoGallerySectionClient photos={photos} />;
+  return (
+    <PhotoGallerySectionClient photos={photos.sort(() => Math.random() - 0.5)} />
+  );
 }
