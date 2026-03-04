@@ -15,24 +15,31 @@ interface Photo {
 interface PhotoGalleryClientProps {
   photos: Photo[];
   hasMore?: boolean;
+  hideHeader?: boolean;
 }
 
-export function PhotoGallerySectionClient({ photos, hasMore = false }: PhotoGalleryClientProps) {
+export function PhotoGallerySectionClient({
+  photos,
+  hasMore = false,
+  hideHeader = false,
+}: PhotoGalleryClientProps) {
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className={`${hideHeader ? "" : "py-20 md:py-32"} bg-background`}>
       <div className="container">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Camera className="w-8 h-8 text-primary" />
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-              フォトギャラリー
-            </h2>
+        {!hideHeader && (
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Camera className="w-8 h-8 text-primary" />
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
+                フォトギャラリー
+              </h2>
+            </div>
+            <div className="w-16 h-1 bg-primary mx-auto mb-6"></div>
+            <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+              これまでの思い出の写真をご覧ください。
+            </p>
           </div>
-          <div className="w-16 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            これまでの思い出の写真をご覧ください。
-          </p>
-        </div>
+        )}
         <PhotoGallery photos={photos} />
         {hasMore && (
           <div className="text-center mt-10">
