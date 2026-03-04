@@ -6,10 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "private-us-east-1.manuscdn.com",
-      },
-      {
-        hostname: "images.unsplash.com",
+        hostname: "*.public.blob.vercel-storage.com",
       },
     ],
   },
