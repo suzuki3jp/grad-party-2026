@@ -3,7 +3,7 @@ import { EVENT_END } from "./event";
 /**
  * これが true || EVENT_END が過ぎている時はモックを表示する
  */
-const GALLERY_MOCK_ENABLED = false;
+const GALLERY_MOCK_ENABLED = true;
 
 export function showMockGallery() {
   return GALLERY_MOCK_ENABLED || new Date() > EVENT_END;
