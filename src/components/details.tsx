@@ -26,7 +26,7 @@ const details: ComponentProps<typeof DetailCard>[] = [
         <span className="block mt-1">
           {toJPTime(EVENT_START)} - {toJPTime(EVENT_END)}
         </span>
-        <span className="block mt-1 text-sm">受付開始: 16:00</span>
+        <span className="block mt-1 text-sm">受付開始: 16:30</span>
       </>
     ),
   },
