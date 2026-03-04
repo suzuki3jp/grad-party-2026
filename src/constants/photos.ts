@@ -1,7 +1,13 @@
+import { EVENT_END } from "./event";
+
 /**
- * true かつ EVENT_END より前の場合、Vercel Blob の代わりにモック画像を表示する
+ * これが true || EVENT_END が過ぎている時はモックを表示する
  */
-export const GALLERY_MOCK_ENABLED = false;
+const GALLERY_MOCK_ENABLED = true;
+
+export function showMockGallery() {
+  return GALLERY_MOCK_ENABLED || new Date() > EVENT_END;
+}
 
 export interface Photo {
   url: string;

@@ -1,7 +1,7 @@
 import { list } from "@vercel/blob";
+import { Suspense } from "react";
 import { PhotoGallerySectionClient } from "@/components/photo-gallery-client";
-import { EVENT_END } from "@/constants/event";
-import { GALLERY_MOCK_ENABLED, PHOTOS } from "@/constants/photos";
+import { PHOTOS, showMockGallery } from "@/constants/photos";
 
 export const revalidate = 60;
 
@@ -9,20 +9,21 @@ export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-background py-20">
       <div className="container">
-        <GalleryContent />
+        <Suspense>
+          <GalleryContent />
+        </Suspense>
       </div>
     </main>
   );
 }
 
 async function GalleryContent() {
-  const photos =
-    GALLERY_MOCK_ENABLED && new Date() < EVENT_END
-      ? PHOTOS.map((p) => ({ url: p.url, pathname: p.alt }))
-      : (await list()).blobs.map((blob) => ({
-          url: blob.url,
-          pathname: blob.pathname,
-        }));
+  const photos = !showMockGallery()
+    ? (await list()).blobs.map((blob) => ({
+        url: blob.url,
+        pathname: blob.pathname,
+      }))
+    : PHOTOS.map((p) => ({ url: p.url, pathname: p.alt }));
 
   return (
     <PhotoGallerySectionClient
