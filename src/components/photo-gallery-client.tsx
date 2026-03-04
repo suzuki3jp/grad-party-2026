@@ -1,7 +1,8 @@
 "use client";
 
-import { Camera, X } from "lucide-react";
+import { Camera, ChevronRight, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useQueryState } from "nuqs";
 import { SELECTED_PHOTO_KEY } from "@/constants/keys";
 import { Button } from "./ui/button";
@@ -13,9 +14,10 @@ interface Photo {
 
 interface PhotoGalleryClientProps {
   photos: Photo[];
+  hasMore?: boolean;
 }
 
-export function PhotoGallerySectionClient({ photos }: PhotoGalleryClientProps) {
+export function PhotoGallerySectionClient({ photos, hasMore = false }: PhotoGalleryClientProps) {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="container">
@@ -32,6 +34,17 @@ export function PhotoGallerySectionClient({ photos }: PhotoGalleryClientProps) {
           </p>
         </div>
         <PhotoGallery photos={photos} />
+        {hasMore && (
+          <div className="text-center mt-10">
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-200 font-medium"
+            >
+              すべての写真を見る
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
